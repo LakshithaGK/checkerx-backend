@@ -17,10 +17,8 @@ io.on('connection', (socket) => {
     onlinePlayers++;
     console.log(`User connected: ${socket.id} | Total online: ${onlinePlayers}`);
     
-    // සියලුම ප්ලේයර්ස්ලාට අලුත් ඔන්ලයින් ගණන යැවීම
     io.emit('online-players', onlinePlayers);
 
-    // ප්ලේයර් කෙනෙක් මූව් එකක් කළහොත් ඒක අනිත් කෙනාට යැවීම
     socket.on('player-move', (moveData) => {
         socket.broadcast.emit('opponent-move', moveData);
     });

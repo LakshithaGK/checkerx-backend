@@ -1,17 +1,13 @@
 {
   "name": "checkerx-backend",
   "version": "1.0.0",
-  "description": "",
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
+  "description": "CheckerX Backend Server",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "dependencies": {
-    "cors": "^2.8.6",
-    "express": "^5.2.1",
-    "socket.io": "^4.8.3"
+    "express": "^4.19.2",
+    "socket.io": "^4.7.2"
   }
 }
